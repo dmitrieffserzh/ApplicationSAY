@@ -1,0 +1,19 @@
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600");
+@import '../_bootstrap/bootstrap.scss';
+
+
+
+
+body {
+  background: #f8f8f8 !important;
+  padding-top: 80px;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 15px !important;
+}
+
+
+.header {}
+.footer {
+  min-height: 400px;
+}
