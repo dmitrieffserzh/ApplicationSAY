@@ -10486,6 +10486,14 @@ a.text-dark:focus {
   }
 }
 
+.lh-100 {
+  line-height: 1;
+}
+
+.lh-125 {
+  line-height: 1.25;
+}
+
 .ow-h {
   overflow: hidden;
 }
