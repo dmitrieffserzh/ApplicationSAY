@@ -1,9 +1,9 @@
-@push('custom-scripts')
+@push('add_scripts')
     <!--<script src="{{ asset('js/components/jq_scroll.js') }}"></script>
     <script src="{{ asset('js/components/paginate.js') }}"></script>-->
 @endpush
 
-@extends('layouts.app')
+@extends('main.main')
 
 @section('content')
 
@@ -13,7 +13,7 @@
             <section class="section col p-0">
                 @forelse ($posts as $post)
 
-                    @include('story.partials.item', ['post' => $post])
+                    @include('main.content.story.partials.item', ['post' => $post])
 
                 @empty
 

@@ -7,8 +7,8 @@
 
         <nav class="main-menu">
             <ul class="main-menu__list">
-                <li class="main-menu__item">
-                    <a href="#" class="main-menu__link">Новости</a>
+                <li class="main-menu__item {{ is_active('news.*') }}">
+                    <a href="{{ route('news.index') }}" class="main-menu__link">Новости</a>
                     <ul class="main-menu-dropdown">
                         <li class="main-menu-dropdown__item"><a href="#" class="main-menu-dropdown__link">Dropdown link</a></li>
                         <li class="main-menu-dropdown__item"><a href="#" class="main-menu-dropdown__link">Dropdown link</a></li>
@@ -17,8 +17,8 @@
                         <li class="main-menu-dropdown__item"><a href="#" class="main-menu-dropdown__link">Dropdown link</a></li>
                     </ul>
                 </li>
-                <li class="main-menu__item">
-                    <a href="#" class="main-menu__link">Истории</a>
+                <li class="main-menu__item {{ is_active('stories.*') }}">
+                    <a href="{{ route('stories.index') }}" class="main-menu__link">Истории</a>
                     <ul class="main-menu-dropdown">
                         <li class="main-menu-dropdown__item"><a href="#" class="main-menu-dropdown__link">Dropdown link</a></li>
                         <li class="main-menu-dropdown__item"><a href="#" class="main-menu-dropdown__link">Dropdown link</a></li>
@@ -27,8 +27,8 @@
                         <li class="main-menu-dropdown__item"><a href="#" class="main-menu-dropdown__link">Dropdown link</a></li>
                     </ul>
                 </li>
-                <li class="main-menu__item">
-                    <a href="#" class="main-menu__link">Пользователи</a>
+                <li class="main-menu__item {{ is_active('users.*') }}">
+                    <a href="{{ route('users.list') }}" class="main-menu__link">Пользователи</a>
                     <ul class="main-menu-dropdown">
                         <li class="main-menu-dropdown__item"><a href="#" class="main-menu-dropdown__link">Dropdown link</a></li>
                         <li class="main-menu-dropdown__item"><a href="#" class="main-menu-dropdown__link">Dropdown link</a></li>

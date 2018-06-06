@@ -23,7 +23,7 @@ class ProfileController extends Controller {
 
         $users = User::paginate(15);
 
-        return view('users.index', compact('users'));
+        return view('main.content.users.index', compact('users'));
 
     }
 
@@ -31,13 +31,13 @@ class ProfileController extends Controller {
     // USER PROFILE
     public function profile($id) {
         $user = User::find($id);
-        return view('users.profile', compact('user'));
+        return view('main.content.users.profile', compact('user'));
     }
 
 
     public function edit($id) {
         $user= User::find($id);
-        return view('users.profile_edit',compact('user'));
+        return view('main.content.users.profile_edit',compact('user'));
     }
 
 

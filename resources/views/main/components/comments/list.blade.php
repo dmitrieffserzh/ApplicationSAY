@@ -15,7 +15,7 @@
             @if($k)
                 @break
             @endif
-            @include('comments.partials.item',['items'=>$comments])
+            @include('main.components.comments.partials.item',['items'=>$comments])
 
         @empty
 
@@ -25,7 +25,7 @@
 
         @endforelse
 
-        @include('comments.partials.form_add')
+        @include('main.components.comments.partials.form_add')
 
     </div>
 </div>

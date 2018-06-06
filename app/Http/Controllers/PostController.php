@@ -12,7 +12,7 @@ class PostController extends Controller {
 
 	public function index() {
 
-		return view( 'news.index', [
+		return view( 'main.content.news.index', [
 			'posts' => Post::paginate( 15 )
 		] );
 	}
@@ -22,7 +22,7 @@ class PostController extends Controller {
 		$post = Post::find( $id );
 		Event::fire( 'news.view', $post );
 
-		return view( 'news.view', [
+		return view( 'main.content.news.view', [
 			'post' => $post
 		] );
 	}

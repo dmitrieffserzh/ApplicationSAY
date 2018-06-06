@@ -40,13 +40,13 @@
 
                 </div>
 
-                @include('components.likes.like', ['content'=>$item])
+                @include('main.components.likes.like', ['content'=>$item])
 
             @endif
         </div>
     </div>
             @if(isset($comments_list[$item->id]))
-                @include('comments.partials.item',['items'=>$comments_list[$item->id]])
+                @include('main.components.comments.partials.item',['items'=>$comments_list[$item->id]])
             @endif
 
 @endforeach

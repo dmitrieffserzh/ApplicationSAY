@@ -23,9 +23,9 @@
                        data-token="{{csrf_token()}}" data-confirm="Вы уверены?" class="btn btn-light btn-sm">Удал</a>
                 </div>
 
-                @include('components.comments.comments_count', ['content'=>$post])
-                @include('components.views.view_count', ['content'=>$post])
-                @include('components.likes.like', ['content'=>$post])
+                @include('main.components.comments-count.comments_count', ['content'=>$post])
+                @include('main.components.views.view_count', ['content'=>$post])
+                @include('main.components.likes.like', ['content'=>$post])
 
             </div>
         </div>

@@ -1,8 +1,8 @@
-@push('custom-scripts')
+@push('add_scripts')
 
 @endpush
 
-@extends('layouts.app')
+@extends('main.main')
 
 @section('content')
 
@@ -38,16 +38,16 @@
 
                     {!! $post->content !!}
 
-                    @include('components.comments.comments_count', ['content'=>$post])
-                    @include('components.views.view_count', ['content'=>$post])
-                    @include('components.likes.like', ['content'=>$post])
+                    @include('main.components.comments-count.comments_count', ['content'=>$post])
+                    @include('main.components.views.view_count', ['content'=>$post])
+                    @include('main.components.likes.like', ['content'=>$post])
 
                 </div>
             </section>
         </div>
         <div class="row">
             <section class="section col p-0 mt-4 border-top border-gray">
-                @include('comments.list')
+                @include('main.components.comments.list')
             </section>
         </div>
     </main>

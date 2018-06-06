@@ -1,8 +1,8 @@
-@push('custom-styles')
+@push('add_styles')
     {{--<link href="{{ asset('css/components/image-select-area.css') }}" rel="stylesheet">--}}
 @endpush
 
-@extends('layouts.aside-left')
+@extends('main.main')
 <style>
 
     .bg-profile {
@@ -35,7 +35,7 @@
                                  src="{{ getImage('normal', $user->profile->avatar) }}"
                                  alt="{{ $user->nickname }}">
                             @if(Auth::id() == $user->id)
-                                @include('users.partials.image_form')
+                                @include('main.content.users.partials.image_form')
                             @endif
                         </div>
                     </div>

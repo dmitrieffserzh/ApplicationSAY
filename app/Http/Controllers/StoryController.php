@@ -14,12 +14,12 @@ class StoryController extends Controller {
     public function index() {
 
         $posts = Story::paginate(15);
-        return view('story.index', compact('posts'));
+        return view('main.content.story.index', compact('posts'));
     }
 
 
     public function create() {
-        return view('story.create');
+        return view('main.content.story.create');
     }
 
 
@@ -39,7 +39,7 @@ class StoryController extends Controller {
         $post = Story::find($id);
         Event::fire('story.view', $post);
 
-        return view('story.view',compact('post'));
+        return view('main.content.story.view',compact('post'));
     }
 
 

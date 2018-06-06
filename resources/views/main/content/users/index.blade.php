@@ -1,7 +1,7 @@
-@push('custom-scripts')
+@push('add_scripts')
 
 @endpush
-@extends('layouts.app')
+@extends('main.main')
 
 @section('content')
 
@@ -13,7 +13,7 @@
             @php ($count = count($users))
             @forelse ($users as $user)
 
-                @include('users.partials.item', ['post' => $user])
+                @include('main.content.users.partials.item', ['post' => $user])
 
                 @if(--$count > 0)
 

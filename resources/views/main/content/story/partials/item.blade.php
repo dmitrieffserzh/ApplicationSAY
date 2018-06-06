@@ -39,9 +39,9 @@
     </div>
     <footer class="article-footer pt-2 px-3 border-top border-gray lh-100">
 
-        @include('components.comments.comments_count', ['content'=>$post])
-        @include('components.views.view_count', ['content'=>$post])
-        @include('components.likes.like', ['content'=>$post])
+        @include('main.components.comments-count.comments_count', ['content'=>$post])
+        @include('main.components.views.view_count', ['content'=>$post])
+        @include('main.components.likes.like', ['content'=>$post])
 
     </footer>
 </article>

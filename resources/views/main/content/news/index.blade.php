@@ -1,8 +1,8 @@
-@push('custom-scripts')
+@push('add_scripts')
 
 @endpush
 
-@extends('layouts.app')
+@extends('main.main')
 
 @section('content')
     <main id="content" class="col-md-9">
@@ -18,7 +18,7 @@
                 @endif
 
                 <div class="row">
-                    @include('news.partials.item', ['posts' => $posts])
+                    @include('main.content.news.partials.item', ['posts' => $posts])
                 </div>
 
                 {!! $posts->links() !!}
