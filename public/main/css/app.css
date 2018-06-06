@@ -10653,6 +10653,14 @@ body {
   margin-right: 5px;
 }
 
+.feather-bell {
+  stroke: #fff;
+  fill: #fff;
+  float: left;
+  margin-top: .8rem;
+  margin-right: .5rem;
+}
+
 .article-content p {
   padding-left: 1rem;
   padding-right: 1rem;

@@ -5,7 +5,7 @@
             {{ config('app.name', 'Laravel') }}
         </a>
 
-        <nav class="main-menu">
+        <nav class="main-menu d-none d-md-inline-block">
             <ul class="main-menu__list">
                 <li class="main-menu__item {{ is_active('news.*') }}">
                     <a href="{{ route('news.index') }}" class="main-menu__link">Новости</a>
@@ -60,6 +60,9 @@
                 </ul>
             </div>
         @else
+
+
+
                 <!--<li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -82,7 +85,9 @@
 
                 @include('main.components.users.user_menu_top')
 
-        @endguest
+
+
+    @endguest
 
         <!--<div class="search">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
