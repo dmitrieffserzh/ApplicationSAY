@@ -1,3 +1,9 @@
+@push('add_styles')
+    <link href="{{ asset('main/css/likes.css') }}" rel="stylesheet">
+    <link href="{{ asset('main/css/comments.css') }}" rel="stylesheet">
+    <link href="{{ asset('main/css/views.css') }}" rel="stylesheet">
+@endpush
+
 @extends('main.main')
 
 @section('home_news')

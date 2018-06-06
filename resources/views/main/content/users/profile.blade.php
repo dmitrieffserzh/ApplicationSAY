@@ -2,6 +2,11 @@
     {{--<link href="{{ asset('css/components/image-select-area.css') }}" rel="stylesheet">--}}
 @endpush
 
+@push('add_scripts')
+    <script src="{{ asset('main/js/image_uploader.js') }}"></script>
+@endpush
+
+
 @extends('main.main')
 <style>
 

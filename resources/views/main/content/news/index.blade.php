@@ -3,9 +3,6 @@
     <link href="{{ asset('main/css/comments.css') }}" rel="stylesheet">
     <link href="{{ asset('main/css/views.css') }}" rel="stylesheet">
 @endpush
-@push('add_scripts')
-
-@endpush
 
 @extends('main.main')
 
