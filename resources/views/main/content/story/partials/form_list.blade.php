@@ -1,8 +1,3 @@
-@push('custom-scripts')
-    <script src="{{ asset('js/components/jq_hotkeys.js') }}"></script>
-    <script src="{{ asset('js/components/bootstrap-wysiwyg.js') }}"></script>
-@endpush
-
 <div id="form-messages" class="alert success" role="alert" style="display: none;"></div>
 <form id="new_post">
     {{ csrf_field() }}

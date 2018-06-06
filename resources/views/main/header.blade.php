@@ -78,6 +78,10 @@
                         </form>
                     </div>
                 </li>-->
+
+
+                @include('main.components.users.user_menu_top')
+
         @endguest
 
         <!--<div class="search">

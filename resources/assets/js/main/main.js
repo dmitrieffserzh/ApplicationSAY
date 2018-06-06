@@ -16,3 +16,4 @@ require('../_bootstrap/modal.js');
 // APPLICATION COMPONENTS
 require('./components/modal-ajax.js');
 require('./components/likes.js');
+require('./components/follow.js');

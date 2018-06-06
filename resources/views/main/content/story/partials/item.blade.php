@@ -1,4 +1,4 @@
-<article class="article mb-3 pt-3 pb-2 bg-white rounded shadow">
+<article class="article mb-3 pt-3 pb-2">
     <header class="article-header">
         <div class="media pb-3 px-3 border-bottom border-gray lh-100">
                <span class="d-inline-block position-relative mr-2">

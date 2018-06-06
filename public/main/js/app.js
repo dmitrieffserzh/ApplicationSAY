@@ -14489,12 +14489,12 @@ var Tooltip = function ($) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(6);
-__webpack_require__(19);
 __webpack_require__(20);
 __webpack_require__(21);
 __webpack_require__(22);
 __webpack_require__(23);
-module.exports = __webpack_require__(24);
+__webpack_require__(24);
+module.exports = __webpack_require__(25);
 
 
 /***/ }),
@@ -14518,6 +14518,7 @@ __webpack_require__(3);
 // APPLICATION COMPONENTS
 __webpack_require__(17);
 __webpack_require__(18);
+__webpack_require__(19);
 
 /***/ }),
 /* 7 */
@@ -17422,7 +17423,28 @@ $(document).on('click', '.component-likes__button', function () {
 /* 19 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+// FOLLOW SYSTEM
+$(document).on('click', '.follow', function () {
+    var elem = $(this).parent();
+    var data = $(this).data();
+    $.ajax({
+        headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+        data: data,
+        type: 'POST',
+        url: '/follow_handler',
+        success: function success(data) {
+            if (data.success === true) {
+                elem.find('.follow').text('Отписаться');
+                console.log(data);
+            } else {
+                elem.find('.follow').text('Подписаться');
+                console.log(data);
+            }
+        }
+    });
+
+    event.preventDefault();
+});
 
 /***/ }),
 /* 20 */
@@ -17450,6 +17472,12 @@ $(document).on('click', '.component-likes__button', function () {
 
 /***/ }),
 /* 24 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 25 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

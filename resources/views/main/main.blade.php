@@ -19,11 +19,18 @@
     @include('main.header')
 
     <div class="container">
-        <div class="row no-gutters bg-white rounded shadow">
+        <div class="row no-gutters bg-white rounded shadow ow-h">
+
+            {{-- ONLY MAIN PAGE --}}
+
+            @yield('home_news')
+
+            {{-- END --}}
+
             <main class="main col-md-9 px-3 py-4 border-right border-gray">
                 @yield('content')
             </main>
-            <aside class="aside col-md-3">
+            <aside class="aside col-md-3 px-3 py-4">
                 @yield('aside')
             </aside>
         </div>

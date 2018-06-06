@@ -2,9 +2,9 @@
     <span class="news-tile__bg"></span>
     <header class="news-tile__wide-header">
 
-        @include('components.comments.comments_count', ['content'=>$content])
-        @include('components.views.view_count', ['content'=>$content])
-        @include('components.likes.like', ['content'=>$content])
+        @include('main.components.comments-count.comments_count', ['content'=>$content])
+        @include('main.components.views.view_count', ['content'=>$content])
+        @include('main.components.likes.like', ['content'=>$content])
 
 
         <span class="news-tile__wide-category d-block mt-5 text-light small text-lowercase">

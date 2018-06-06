@@ -6,5 +6,8 @@
     "/main/css/users.css": "/main/css/users.css",
     "/main/css/views.css": "/main/css/views.css",
     "/admin/css/admin.css": "/admin/css/admin.css",
-    "/admin/js/admin.js": "/admin/js/admin.js"
+    "/admin/js/admin.js": "/admin/js/admin.js",
+    "/main/js/wysiwyg.js": "/main/js/wysiwyg.js",
+    "/main/js/jq_hotkeys.js": "/main/js/jq_hotkeys.js",
+    "/main/js/image_uploader.js": "/main/js/image_uploader.js"
 }

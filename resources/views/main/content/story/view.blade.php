@@ -4,7 +4,8 @@
     <link href="{{ asset('main/css/views.css') }}" rel="stylesheet">
 @endpush
 @push('add_scripts')
-
+    <script src="{{ asset('/main/js/jq_hotkeys.js') }}"></script>
+    <script src="{{ asset('/main/js/wysiwyg.js') }}"></script>
 @endpush
 
 @extends('main.main')
