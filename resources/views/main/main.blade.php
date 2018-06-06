@@ -9,19 +9,21 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <script src="{{ asset('main/js/app.js') }}" defer></script>
     <link href="{{ asset('main/css/app.css') }}" rel="stylesheet">
+    @stack('add_styles')
+    <script src="{{ asset('main/js/app.js') }}"></script>
+    @stack('add_scripts')
 </head>
 <body>
     {{-- HEADER --}}
     @include('main.header')
 
     <div class="container">
-        <div class="bg-white rounded shadow">
-            <main class="main col-9 px-3 py-4">
+        <div class="row no-gutters bg-white rounded shadow">
+            <main class="main col-md-9 px-3 py-4 border-right border-gray">
                 @yield('content')
             </main>
-            <aside class="aside col-3">
+            <aside class="aside col-md-3">
                 @yield('aside')
             </aside>
         </div>
@@ -30,5 +32,10 @@
     {{-- FOOTER --}}
     @include('main.footer')
 
+    {{-- MODAL --}}
+    <div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document"></div>
+    </div>
+    @yield('scripts')
 </body>
 </html>

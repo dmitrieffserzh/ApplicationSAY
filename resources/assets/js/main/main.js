@@ -5,4 +5,13 @@
  * application frontend using useful Laravel and JavaScript libraries.
  */
 
-require('jquery');
+window.$ = window.jQuery = require('jquery');
+
+// BOOTSTRAP COMPONENTS
+require('../_bootstrap/index.js');
+require('../_bootstrap/util.js');
+require('../_bootstrap/modal.js');
+
+
+// APPLICATION COMPONENTS
+require('./components/modal-ajax.js');

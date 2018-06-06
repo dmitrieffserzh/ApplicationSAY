@@ -14,3 +14,13 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+
+
+
+
+
+
+
+// FRONT
+// AJAX
+Route::post('/login', 'Auth\LoginController@ajax_login');
