@@ -20,7 +20,7 @@ class PostController extends Controller {
 	public function show( $id ) {
 
 		$post = Post::find( $id );
-		Event::fire( 'news.view', $post );
+		Event::fire( 'main.content.news.view', $post );
 
 		return view( 'main.content.news.view', [
 			'post' => $post

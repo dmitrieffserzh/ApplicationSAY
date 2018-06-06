@@ -1,6 +1,10 @@
 {
     "/main/js/app.js": "/main/js/app.js",
     "/main/css/app.css": "/main/css/app.css",
+    "/main/css/comments.css": "/main/css/comments.css",
+    "/main/css/likes.css": "/main/css/likes.css",
+    "/main/css/users.css": "/main/css/users.css",
+    "/main/css/views.css": "/main/css/views.css",
     "/admin/css/admin.css": "/admin/css/admin.css",
     "/admin/js/admin.js": "/admin/js/admin.js"
 }

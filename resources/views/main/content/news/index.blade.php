@@ -1,3 +1,8 @@
+@push('add_styles')
+    <link href="{{ asset('main/css/likes.css') }}" rel="stylesheet">
+    <link href="{{ asset('main/css/comments.css') }}" rel="stylesheet">
+    <link href="{{ asset('main/css/views.css') }}" rel="stylesheet">
+@endpush
 @push('add_scripts')
 
 @endpush
@@ -5,32 +10,29 @@
 @extends('main.main')
 
 @section('content')
-    <main id="content" class="col-md-9">
+
+    <section class="section">
+        @if(Session::has('success'))
+            <div class="alert alert-success alert-dismissible fade show">
+                {{ Session::get('success') }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
+
         <div class="row">
-            <section class="section col p-0">
-                @if(Session::has('success'))
-                    <div class="alert alert-success alert-dismissible fade show">
-                        {{ Session::get('success') }}
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                @endif
-
-                <div class="row">
-                    @include('main.content.news.partials.item', ['posts' => $posts])
-                </div>
-
-                {!! $posts->links() !!}
-            </section>
+            @include('main.content.news.partials.item', ['posts' => $posts])
         </div>
-    </main>
+
+            {!! $posts->links() !!}
+
+    </section>
+
 @endsection
 
 
 @section('aside')
-    <aside class="col-md-3 py-4">
-
         <h6 class="text-uppercase border-bottom border-gray pb-2 text-primary">Боковая колонка</h6>
         <ul class="aside-menu">
             <li><a href="{{ route('users.list') }}">Пользователи</a></li>
@@ -64,5 +66,4 @@
 
             @endif
         </ul>
-    </aside>
 @endsection

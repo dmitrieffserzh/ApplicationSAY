@@ -14489,8 +14489,12 @@ var Tooltip = function ($) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(6);
-__webpack_require__(18);
-module.exports = __webpack_require__(19);
+__webpack_require__(19);
+__webpack_require__(20);
+__webpack_require__(21);
+__webpack_require__(22);
+__webpack_require__(23);
+module.exports = __webpack_require__(24);
 
 
 /***/ }),
@@ -14513,6 +14517,7 @@ __webpack_require__(3);
 
 // APPLICATION COMPONENTS
 __webpack_require__(17);
+__webpack_require__(18);
 
 /***/ }),
 /* 7 */
@@ -17392,10 +17397,59 @@ $(function () {
 /* 18 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+// LIKE SYSTEM
+$(document).on('click', '.component-likes__button', function () {
+    var that_main = $(this).parent();
+    var data = $(this).data();
+    $.ajax({
+        headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+        data: data,
+        type: 'POST',
+        url: '/like',
+        success: function success(result) {
+            that_main.find('.component-likes__count').text(result.like_count);
+            if (result.liked === true) {
+                that_main.find('.component-likes__button').removeClass('like--false').addClass('like--true');
+            } else {
+                that_main.find('.component-likes__button').removeClass('like--true').addClass('like--false');
+            }
+        }
+    });
+    event.preventDefault();
+});
 
 /***/ }),
 /* 19 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 24 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

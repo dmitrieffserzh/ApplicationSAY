@@ -37,7 +37,7 @@ class StoryController extends Controller {
     public function show(Request $request, $id) {
 
         $post = Story::find($id);
-        Event::fire('story.view', $post);
+        Event::fire('main.content.story.view', $post);
 
         return view('main.content.story.view',compact('post'));
     }

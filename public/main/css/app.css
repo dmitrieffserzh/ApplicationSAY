@@ -10553,7 +10553,7 @@ body {
 }
 
 .main-menu__item.active {
-  background: #386898;
+  background: rgba(255, 255, 255, 0.09);
 }
 
 .main-menu__link {

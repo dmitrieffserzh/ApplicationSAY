@@ -64,7 +64,7 @@ body {
       display: block !important;
     }
     &.active {
-      background: #386898;
+      background: rgba(255, 255, 255, 0.09);
     }
   }
   &__link {
@@ -73,16 +73,6 @@ body {
     font-weight: 500;
     color: #fff;
     line-height: 1.25rem;
-    //&::before {
-    //  content: '';
-    //  position: absolute;
-    //  left: 0;
-    //  right: 0;
-    //  bottom: 0;
-    //  height: 1px;
-    //  width: 100%;
-    //  background: #b9fbff;
-    //}
     &:hover {
       color: #fff;
       text-decoration: none;
