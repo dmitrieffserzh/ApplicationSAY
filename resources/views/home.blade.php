@@ -77,7 +77,7 @@
 
 
 
-    <h6 class="text-uppercase text-primary">Новости</h6>
+    <h6 class="text-uppercase text-primary mt-5">Новости</h6>
 
     @foreach($hot_posts as $post)
         <div class="">

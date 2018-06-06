@@ -25,7 +25,6 @@
 </style>
 
 @section('content')
-    <main id="content" class="col-md-9 mb-3 p-0 bg-white rounded shadow ow-h">
         <section class="section profile ow-h">
             <div class="profile-header bg-profile pt-5 pb-5 p-md-0">
                 <div class="row no-gutters text-center text-md-left">
@@ -163,13 +162,12 @@
 
 
             </section>
-    </main>
 
 @endsection
 
 
 @section('aside')
-    <aside class="col-md-3">
+
         <ul>
             <li><a href="{{ route('users.list') }}">Пользователи</a></li>
             <li><a href="{{ route('news.index') }}">Новости</a></li>
@@ -201,7 +199,7 @@
 
             @endif
         </ul>
-    </aside>
+
 @endsection
 {{--<script>--}}
 
