@@ -18,6 +18,7 @@
         <a class="ajax dropdown-item" href="#"
            data-toggle="modal"
            data-name="Пожаловаться"
+           data-content="<p>Эта хренотень реально нарушает ваши авторские права или оскорбляет Вас?</p>"
            data-modal-size="modal-sm">Пожаловаться</a>
     </div>
 </div>
