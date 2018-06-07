@@ -12,8 +12,7 @@
         <a class="ajax dropdown-item" href="#"
            data-toggle="modal"
            data-name="Пожаловаться"
-           data-content="Ты серьезно хочешь удалить это говно?"
-           data-modal-size="modal-sm">Удалить</a>
+           data-content="Ты серьезно хочешь удалить это говно?">Удалить</a>
             <div class="dropdown-divider"></div>
         @endif
         <a class="ajax dropdown-item" href="#"
