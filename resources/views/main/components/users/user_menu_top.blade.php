@@ -16,7 +16,7 @@
     </a>
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="user-dropdown">
         <!--<div class="dropdown-header">{{ Auth::user()->nickname }}</div>-->
-        <a class="dropdown-item" href="{{ route('admin.dashboard') }}">{{ __('Мой профиль') }}</a>
+        <a class="dropdown-item" href="{{ route('users.profile', Auth::id()) }}">{{ __('Мой профиль') }}</a>
         <a class="dropdown-item" href="{{ route('admin.dashboard') }}">{{ __('Мои подписчики') }}</a>
         <a class="dropdown-item" href="{{ route('admin.dashboard') }}">{{ __('Мои подписки') }}</a>
         <a class="dropdown-item" href="{{ route('admin.dashboard') }}">{{ __('Мои сообщения') }}</a>
