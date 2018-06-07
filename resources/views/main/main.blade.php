@@ -12,7 +12,7 @@
     <link href="{{ asset('main/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('main/css/users.css') }}" rel="stylesheet">
     @stack('add_styles')
-    <script src="{{ asset('main/js/app.js') }}"></script>
+    <script src="{{ asset('main/js/app.js') }}" defer></script>
     @stack('add_scripts')
 </head>
 <body>
