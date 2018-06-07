@@ -5,8 +5,8 @@
     <link href="{{ asset('main/css/services.css') }}" rel="stylesheet">
 @endpush
 @push('add_scripts')
-    <script src="{{ asset('/main/js/jq_hotkeys.js') }}"></script>
-    <script src="{{ asset('/main/js/wysiwyg.js') }}"></script>
+    <script src="{{ asset('/main/js/jq_hotkeys.js') }}" defer></script>
+    <script src="{{ asset('/main/js/wysiwyg.js') }}" defer></script>
 @endpush
 
 @extends('main.main')

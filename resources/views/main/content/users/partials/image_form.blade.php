@@ -1,5 +1,5 @@
 @push('custom-scripts')
-    <script src="{{ asset('js/components/image_uploader.js') }}"></script>
+    <script src="{{ asset('js/components/image_uploader.js') }}" defer></script>
 @endpush
 <form class="profile-image__form">
     {{ csrf_field() }}

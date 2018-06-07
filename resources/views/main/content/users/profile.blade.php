@@ -3,7 +3,7 @@
 @endpush
 
 @push('add_scripts')
-    <script src="{{ asset('main/js/image_uploader.js') }}"></script>
+    <script src="{{ asset('main/js/image_uploader.js') }}" defer></script>
 @endpush
 
 
