@@ -1,0 +1,25 @@
+.component-comments-count {
+  display: inline-block;
+  line-height: 0;
+}
+
+.component-comments-count__count {
+  display: inline-block;
+  float: right;
+  padding: 0 .3rem;
+  min-width: 40px;
+  font-family: Arial, monospace;
+  font-size: 14px;
+  color: #b6bcc7;
+  text-align: left;
+  vertical-align: middle;
+  line-height: 1.4rem;
+}
+
+.component-comments-count__icon {
+  display: inline-block;
+  fill: none;
+  stroke: #cad0dc !important;
+  overflow: hidden;
+}
+

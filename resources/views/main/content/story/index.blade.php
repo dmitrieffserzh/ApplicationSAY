@@ -2,7 +2,9 @@
     <link href="{{ asset('main/css/likes.css') }}" rel="stylesheet">
     <link href="{{ asset('main/css/comments.css') }}" rel="stylesheet">
     <link href="{{ asset('main/css/views.css') }}" rel="stylesheet">
+    <link href="{{ asset('main/css/services.css') }}" rel="stylesheet">
 @endpush
+
 @push('add_scripts')
     <!--<script src="{{ asset('js/components/jq_scroll.js') }}"></script>
     <script src="{{ asset('js/components/paginate.js') }}"></script>-->
@@ -40,6 +42,12 @@
         <li><a href="{{ route('users.list') }}">Пользователи</a></li>
         <li><a href="{{ route('news.index') }}">Новости</a></li>
         <li><a href="{{ route('stories.index') }}">Истории</a></li>
+
+        @if(Auth::check())
+            @if( Auth::user()->role == 'editor' || Auth::user()->is_admin())
+                <li><a href="{{ route('admin.dashboard') }}">Панель управления</a></li>
+            @endif
+        @endif
 
         <!-- Authentication Links -->
         @if (Auth::guest())

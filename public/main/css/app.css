@@ -3655,7 +3655,7 @@ input[type="button"].btn-block {
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 10rem;
+  min-width: 15rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
@@ -3664,10 +3664,10 @@ input[type="button"].btn-block {
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(127, 112, 239, 0.05);
   border-radius: 0.25rem;
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(84, 88, 158, 0.09);
+          box-shadow: 0 0.5rem 1rem rgba(84, 88, 158, 0.09);
 }
 
 .dropdown-menu-right {
@@ -3781,16 +3781,17 @@ input[type="button"].btn-block {
   height: 0;
   margin: 0.5rem 0;
   overflow: hidden;
-  border-top: 1px solid #e9ecef;
+  border-top: 1px solid #f7f9fb;
 }
 
 .dropdown-item {
   display: block;
   width: 100%;
-  padding: 0.25rem 1.5rem;
+  padding: 0.3rem 1rem;
   clear: both;
+  font-size: 13px;
   font-weight: 400;
-  color: #212529;
+  color: #98adc5;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
@@ -3823,7 +3824,7 @@ input[type="button"].btn-block {
 
 .dropdown-header {
   display: block;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   margin-bottom: 0;
   font-size: 0.875rem;
   color: #6c757d;
@@ -3832,8 +3833,8 @@ input[type="button"].btn-block {
 
 .dropdown-item-text {
   display: block;
-  padding: 0.25rem 1.5rem;
-  color: #212529;
+  padding: 0.3rem 1rem;
+  color: #98adc5;
 }
 
 .btn-group,
@@ -10515,8 +10516,8 @@ body {
   left: 0;
   right: 0;
   background: #5268d2;
-  background: -webkit-gradient(linear, right top, left top, from(#9774fe), to(#5268d2));
-  background: linear-gradient(to left, #9774fe 0%, #5268d2 100%);
+  background: -webkit-gradient(linear, right top, left top, from(#74c4fe), to(#5268d2));
+  background: linear-gradient(to left, #74c4fe 0%, #5268d2 100%);
   width: 100%;
   -webkit-box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.03);
           box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.03);
@@ -10669,8 +10670,6 @@ body {
 }
 
 .article-content p {
-  padding-left: 1rem;
-  padding-right: 1rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
   margin-bottom: 0;

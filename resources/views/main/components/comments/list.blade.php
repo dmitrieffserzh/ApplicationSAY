@@ -1,4 +1,4 @@
-<div class="comments pt-3 px-3">
+<div class="comments pt-3">
 
     <h5>Комментарии <span class="badge badge-secondary">{{$post->comments->count()}}</span></h5>
     @php

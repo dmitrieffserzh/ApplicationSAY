@@ -13,11 +13,12 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
-
-
 // ADMIN
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'name' => 'admin'], function() {
+Route::group([
+	'namespace' => 'Admin',
+	'prefix' => 'admin',
+	'name' => 'admin',
+	'middleware' => ['auth', 'admin']], function() {
 
 	Route::get('/', 'AdminController@index')->name('admin.dashboard');
 
@@ -32,8 +33,12 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'name' => 'admin'], f
 });
 
 
+
+
 // FRONT
 // AJAX
+Route::get('/', 'HomeController@index')->name('home');
+
 Route::post('/login', 'Auth\LoginController@ajax_login');
 
 // NEWS

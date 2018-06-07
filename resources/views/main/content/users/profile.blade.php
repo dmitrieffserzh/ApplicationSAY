@@ -178,6 +178,12 @@
             <li><a href="{{ route('news.index') }}">Новости</a></li>
             <li><a href="{{ route('stories.index') }}">Истории</a></li>
 
+            @if(Auth::check())
+                @if( Auth::user()->role == 'editor' || Auth::user()->is_admin())
+                    <li><a href="{{ route('admin.dashboard') }}">Панель управления</a></li>
+                @endif
+            @endif
+
             <!-- Authentication Links -->
             @if (Auth::guest())
                 <li><a href="{{ route('login') }}" class="ajax-modal main-menu__link" data-toggle="modal" data-url="{{ route('login') }}" data-name="Войти" data-modal-size="modal-sm">Войти</a></li>

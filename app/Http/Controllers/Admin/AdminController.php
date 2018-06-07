@@ -2,19 +2,23 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Admin\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class AdminController extends Controller {
 
+    public function __construct() {
+        //$this->middleware('auth');
+    }
+
+    public function index() {
 
 
+    	$posts = Post::all();
 
-
-
-
-	public function index() {
-
-		return view('admin.dashboard');
-	}
+        return view('admin.dashboard', [
+        	'posts' => $posts
+        ]);
+    }
 }

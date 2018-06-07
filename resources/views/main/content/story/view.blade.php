@@ -2,6 +2,7 @@
     <link href="{{ asset('main/css/likes.css') }}" rel="stylesheet">
     <link href="{{ asset('main/css/comments.css') }}" rel="stylesheet">
     <link href="{{ asset('main/css/views.css') }}" rel="stylesheet">
+    <link href="{{ asset('main/css/services.css') }}" rel="stylesheet">
 @endpush
 @push('add_scripts')
     <script src="{{ asset('/main/js/jq_hotkeys.js') }}"></script>
@@ -13,7 +14,7 @@
 @section('content')
 
     <section class="section col p-0">
-        <div class="media pb-3 px-3 border-bottom border-gray lh-100">
+        <div class="media pb-3 border-bottom border-gray lh-100">
                <span class="d-inline-block position-relative mr-2">
                    <img class="rounded-circle" style="width: 30px; height: 30px;"
                         src="{{ getImage('thumbnail', $post->owner->profile->avatar) }}"
@@ -33,11 +34,16 @@
                         {{ $post->created_at->diffForHumans() }}
                     </span>
             </div>
-        </div>
-        <div class="col">
-            <div class="float-right">
+
+            @if(Auth::check())
+                @include('main.components.service.service_menu', ['content' => $post])
+            @endif
+            <!--<div class="float-right">
                 <a class="btn btn-primary btn-sm" href="{{ route('stories.index') }}"> Назад</a>
-            </div>
+            </div>-->
+        </div>
+
+
             <h1 class="h5 mt-4 mb-3">{{ $post->title}}</h1>
 
             {!! $post->content !!}
@@ -46,7 +52,7 @@
             @include('main.components.views.view_count', ['content'=>$post])
             @include('main.components.likes.like', ['content'=>$post])
 
-        </div>
+
     </section>
 
     <section class="section col p-0 mt-4 border-top border-gray">
@@ -61,6 +67,12 @@
         <li><a href="{{ route('users.list') }}">Пользователи</a></li>
         <li><a href="{{ route('news.index') }}">Новости</a></li>
         <li><a href="{{ route('stories.index') }}">Истории</a></li>
+
+        @if(Auth::check())
+            @if( Auth::user()->role == 'editor' || Auth::user()->is_admin())
+                <li><a href="{{ route('admin.dashboard') }}">Панель управления</a></li>
+            @endif
+        @endif
 
         <!-- Authentication Links -->
         @if (Auth::guest())

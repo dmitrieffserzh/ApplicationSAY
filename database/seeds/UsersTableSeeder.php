@@ -18,6 +18,7 @@ class UsersTableSeeder extends Seeder
                 'nickname' => str_random(10),
                 'email' => str_random(10). '@gmail.com',
                 'password' => bcrypt('dmitriev'),
+                'role' => 'user',
             ]);
             DB::table('profiles')->insert([
                 'user_id' => $x,

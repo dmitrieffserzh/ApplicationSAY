@@ -38,9 +38,9 @@ body {
   right: 0;
   //background: #fff;
   background: #5268d2;
-  background: -webkit-linear-gradient(right, #9774fe 0%, #5268d2 100%);
-  background: -o-linear-gradient(right, #9774fe 0%, #5268d2 100%);
-  background: linear-gradient(to left, #9774fe 0%, #5268d2 100%);
+  background: -webkit-linear-gradient(right, #74c4fe 0%, #5268d2 100%);
+  background: -o-linear-gradient(right, #74c4fe 0%, #5268d2 100%);
+  background: linear-gradient(to left, #74c4fe 0%, #5268d2 100%);
   width: 100%;
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.03);
   z-index: 100;
@@ -190,8 +190,6 @@ body {
 
 
 .article-content p {
-  padding-left: 1rem;
-  padding-right: 1rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
   margin-bottom: 0;

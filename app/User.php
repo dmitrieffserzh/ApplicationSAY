@@ -15,24 +15,23 @@ class User extends Authenticatable {
 	use Notifiable;
 	use SoftDeletes;
 
-	/**
-	 * The attributes that are mass assignable.
-	 *
-	 * @var array
-	 */
 	protected $fillable = [
 		'nickname', 'email', 'password',
 	];
 
-	/**
-	 * The attributes that should be hidden for arrays.
-	 *
-	 * @var array
-	 */
 	protected $hidden = [
 		'password', 'remember_token',
 	];
 
+
+	// IS ADMIN
+	public function is_admin() {
+		if ( $this->role == 'admin' ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 	// RELATIONS
 	public function liked() {

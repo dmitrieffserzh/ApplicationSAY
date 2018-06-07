@@ -1,0 +1,15 @@
+.component {
+  & .service-menu {
+    &__button {
+      float: right;
+      background: none;
+      border: none;
+      outline: none;
+      stroke: #e0e5ef;
+      &:hover,
+      &:focus {
+        stroke: #a0c3f5;
+      }
+    }
+  }
+}
