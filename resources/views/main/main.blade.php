@@ -19,7 +19,7 @@
     {{-- HEADER --}}
     @include('main.header')
 
-    <div class="container">
+    <div class="container no-padding">
         <div class="row no-gutters bg-white rounded shadow ow-h">
 
             {{-- ONLY MAIN PAGE --}}

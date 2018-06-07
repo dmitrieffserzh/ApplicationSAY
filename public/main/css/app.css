@@ -10499,6 +10499,12 @@ a.text-dark:focus {
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .no-padding {
+    padding: 0 !important;
+  }
+}
+
 svg {
   float: left;
 }
