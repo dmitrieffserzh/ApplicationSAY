@@ -9,9 +9,13 @@
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="service-dropdown">
         @if( $content->owner->id == Auth::id() || Auth::user()->role == 'editor' || Auth::user()->is_admin())
         <a class="dropdown-item" href="#">Редактировать</a>
-        <a class="dropdown-item" href="#">Удалить</a>
+        <a class="dropdown-item" href="#"
+            onclick="confirm('Вы уверены?');">Удалить</a>
             <div class="dropdown-divider"></div>
         @endif
-        <a class="dropdown-item" href="#">Пожаловаться</a>
+        <a class="ajax dropdown-item" href="#"
+           data-toggle="modal"
+           data-name="Пожаловаться"
+           data-modal-size="modal-sm">Пожаловаться</a>
     </div>
 </div>
