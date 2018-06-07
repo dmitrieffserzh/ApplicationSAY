@@ -3666,8 +3666,8 @@ input[type="button"].btn-block {
   background-clip: padding-box;
   border: 1px solid rgba(127, 112, 239, 0.05);
   border-radius: 0.25rem;
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(84, 88, 158, 0.09);
-          box-shadow: 0 0.5rem 1rem rgba(84, 88, 158, 0.09);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(84, 88, 158, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(84, 88, 158, 0.15);
 }
 
 .dropdown-menu-right {
@@ -3791,7 +3791,7 @@ input[type="button"].btn-block {
   clear: both;
   font-size: 13px;
   font-weight: 400;
-  color: #98adc5;
+  color: #788ca2;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
@@ -3834,7 +3834,7 @@ input[type="button"].btn-block {
 .dropdown-item-text {
   display: block;
   padding: 0.3rem 1rem;
-  color: #98adc5;
+  color: #788ca2;
 }
 
 .btn-group,
@@ -10500,6 +10500,10 @@ a.text-dark:focus {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 50px !important;
+  }
+
   .no-padding {
     padding: 0 !important;
   }
@@ -10522,8 +10526,8 @@ body {
   left: 0;
   right: 0;
   background: #5268d2;
-  background: -webkit-gradient(linear, right top, left top, from(#74c4fe), to(#5268d2));
-  background: linear-gradient(to left, #74c4fe 0%, #5268d2 100%);
+  background: -webkit-gradient(linear, right top, left top, from(#9074fe), to(#5268d2));
+  background: linear-gradient(to left, #9074fe 0%, #5268d2 100%);
   width: 100%;
   -webkit-box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.03);
           box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.03);
